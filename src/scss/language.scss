@@ -1,0 +1,15 @@
+body {
+  &.easy-language {
+    .language--simple {
+      display: block;
+    }
+
+    .language--regular {
+      display: none;
+    }
+  }
+
+  .language--simple {
+    display: none;
+  }
+}

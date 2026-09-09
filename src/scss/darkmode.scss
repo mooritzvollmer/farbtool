@@ -1,0 +1,148 @@
+body {
+  &.dark-mode {
+    background-color: $color-black;
+    color: $color-white;
+
+    .button {
+      background-color: $color-white;
+      color: $color-text;
+      border-color: $color-white;
+
+      &:hover,
+      &:focus-visible {
+        background-color: transparent;
+        color: $color-white;
+        border-color: $color-white;
+      }
+    }
+
+    h1,
+    h2 {
+      color: $color-white;
+    }
+
+    .menu-wrapper {
+      &::before {
+        background-image: radial-gradient(transparent 1px, #000 1px);
+        mask: linear-gradient(#fff 50%, #fff0 100%);
+      }
+    }
+
+    .header {
+      &-svg {
+        .black-light {
+          fill: #fff;
+        }
+
+        .purple-light {
+          fill: #fdb7b6;
+        }
+
+        .reg-white {
+          fill: #292c3a;
+        }
+      }
+    }
+
+    .modal {
+      box-shadow: 0 4px 10px rgba($color-white, 0.1);
+      background-color: $color-text;
+
+      input[type='checkbox'] {
+        border-color: $color-grey;
+
+        &:checked {
+          background-color: $color-white;
+          border-color: $color-white;
+
+          &::after {
+            color: $color-text;
+          }
+        }
+      }
+
+      &-overlay {
+        background: rgba($color-white, 0.1);
+      }
+    }
+
+    .farbtool {
+      .box {
+        background-color: $color-text;
+      }
+
+      .dropdown {
+        &-toggle {
+          background-color: transparent;
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 436.7 448.05'%3E%3Cpath fill='%23fff' d='M407.45,190.5l22.2,22.2c9.4,9.4,9.4,24.6,0,33.9l-194.3,194.4c-9.4,9.4-24.6,9.4-33.9,0L7.05,246.6c-9.4-9.4-9.4-24.6,0-33.9l22.2-22.2c9.5-9.5,25-9.3,34.3.4l114.8,120.5V24c0-13.3,10.7-24,24-24h32c13.3,0,24,10.7,24,24v287.4l114.8-120.5c9.3-9.8,24.8-10,34.3-.4h0Z'/%3E%3C/svg%3E%0A");
+          }
+        }
+
+        &-item {
+          background-color: $color-text;
+
+          &:focus,
+          &:focus-visible,
+          &:hover {
+            background-color: $color-grey-light;
+            color: $color-text;
+          }
+        }
+      }
+
+      #contrast-ratio,
+      .result-item--meta {
+        color: $color-white;
+      }
+    }
+
+    .footer {
+      .logo {
+        &-breadcrumb {
+          color: $color-white;
+
+          button.link {
+            color: $color-white;
+
+            &:hover,
+            &:focus-visible {
+              &::after {
+                background-color: $color-white;
+              }
+            }
+          }
+
+          &-main {
+            color: $color-white;
+            position: relative;
+
+            &::after {
+              position: absolute;
+              bottom: 0;
+              background-color: $color-white;
+              left: 0;
+              content: '';
+              width: 100%;
+              height: baseline(0.25);
+            }
+          }
+        }
+      }
+
+      &-links {
+        .link {
+          color: $color-white;
+
+          &:hover,
+          &:focus-visible {
+            &::after {
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

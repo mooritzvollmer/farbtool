@@ -1,0 +1,86 @@
+body {
+  &.large-text {
+    h1, .h1 {
+      font-size: 4rem;
+      margin-bottom: baseline(3);
+      letter-spacing: .5px;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        font-size: 4.8rem;
+      }
+    }
+
+    h2, .h2 {
+      font-size: 2.5rem;
+      margin-bottom: baseline(3);
+      letter-spacing: .5px;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        font-size: 3.75rem;
+      }
+    }
+
+    h3, .h3 {
+      font-size: 2rem;
+      line-height: 50px;
+      letter-spacing: .5px;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: .5px;
+    }
+
+    label {
+      font-size: 20px;
+    }
+
+    .lead {
+      font-size: 24px;
+    }
+
+    .button {
+      font-size: 18px;
+    }
+
+    .logo-breadcrumb {
+      font-size: 18px;
+    }
+
+    legend {
+      font-size: 18px;
+    }
+
+    fieldset {
+      padding: 20px;
+    }
+
+    .color-input {
+      flex-wrap: wrap;
+    }
+
+    .contrast-ratio {
+      #contrast-ratio {
+        font-size: 24px;
+      }
+    }
+
+    .dropdown-toggle, 
+    .dropdown-item {
+      font-size: 20px;
+    }
+
+    .result-item--content {
+      font-size: 21px;
+    }
+
+    .result-item--meta {
+      font-size: 16px;
+    }
+  }
+}
