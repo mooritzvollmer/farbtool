@@ -16,7 +16,6 @@ The tool evaluates contrast only. A passing result does not by itself establish 
 
 - Accessibility overview: https://barrierefreiheit.moritzvollmer.de/
 - WCAG 2.2 checklist: https://checkliste.moritzvollmer.de/
-- More projects: https://moritzvollmer.de/projekte/
 
 ## Author
 
