@@ -168,3 +168,5 @@ const openModalBtn = document.getElementById("openModal");
         largeTextCheckbox.addEventListener("change", () => updateBodyClass(largeTextCheckbox, "large-text"));
 
         saveBtn.addEventListener("click", () => toggleModal(false));
+
+export { getLuminance, checkContrast };

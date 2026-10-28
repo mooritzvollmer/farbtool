@@ -1,2 +1,3 @@
-import './src/scss/main.scss'
-import './src/js/scripts'
+import './src/modern.css'
+import './src/js/scripts.js'
+import './src/js/presentation.js'
