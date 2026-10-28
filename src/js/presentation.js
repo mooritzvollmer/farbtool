@@ -10,6 +10,10 @@ function syncPresentation(syncFields=true){
  const text=ratio>=normal?`${selected}: Kontrast für normale und große Schrift erfüllt.`:ratio>=large?`${selected}: Für große Schrift erfüllt. Für normale Schrift nicht ausreichend.`:`${selected}: Für normale und große Schrift nicht ausreichend.`
  $('#contrast-verdict').textContent=simple?(ratio>=normal?'Der Kontrast reicht für kleine und große Schrift.':ratio>=large?'Für große Schrift reicht der Kontrast. Für kleine Schrift reicht er nicht.':'Der Kontrast reicht nicht für Text. Wähle andere Farben.'):text
  $('#contrast-verdict').dataset.state=ratio>=normal?'passed':ratio>=large?'partial':'failed'
+ $('#result-signal').dataset.state=ratio>=normal?'passed':'failed'
+ $('#verdict-status').textContent=ratio>=normal?'Bestanden':'Nicht bestanden'
+ $('#verdict-icon').textContent=ratio>=normal?'✓':'×'
+ $('#verdict-scope').textContent='Normale Schrift · WCAG '+selected+' · mindestens '+(selected==='AAA'?'7':'4,5')+':1'
  const position=Math.max(0,Math.min(100,Math.log(ratio)/Math.log(21)*100));$('#scale-pointer').style.left=position+'%'
  $('.contrast-scale').setAttribute('aria-label',`Kontrast ${ratio.toFixed(2)} zu 1. Skala von 1 bis 21, Schwellen bei 3, 4,5 und 7.`)
  document.querySelectorAll('.dropdown-item').forEach(option=>option.setAttribute('aria-selected',String(option.textContent.trim()==='WCAG Level '+selected)))
